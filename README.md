@@ -259,3 +259,118 @@ In the current version the same function is invoked regardless of the panel's pa
 </table>
 
 ### **More Functions and Entry Points**
+
+#### Custom Top-bar and Left-Bar
+
+in your JS file define a function that will return an object containing template and methods, replacing the default top or left bar:
+
+##### For Top-Bar
+
+```JavaScript
+ function topbar() {
+  return {
+    template: `<div id="topbar" style="top:0px; left:50%; position:absolute;">Topbar</div>`,
+    methods: {
+      topBarClick(template) {
+        template.querySelector("#topbar").onclick = (e) => {
+          console.log("Topbar clicked!");
+        };
+      },
+    },
+  };
+```
+
+##### For Left-Bar
+
+```JavaScript
+ function leftbar() {
+  return {
+    template: `<div id="leftbar" style="top:0px; position:absolute;">LeftBar</div>`,
+    methods: {
+      leftbarClick(template) {
+        template.querySelector("#leftbar").onclick = (e) => {
+          console.log("Leftbar clicked!");
+        };
+      },
+    },
+  };
+```
+
+#### Custom Left Panels
+
+in your JS file define a functions replacing default panels with custom panels with template and methods:
+
+```JavaScript
+function addPanel() {
+  return {
+    panelName: 'My Add Panel',
+    template: `<span>Hello</span>`,
+    methods: {
+      example(addPanelContainer) {
+        console.log(addPanelContainer);
+      },
+    },
+  };
+}
+
+function addSectionsPanel() {
+  return {
+    panelName: 'My Sections Panel',
+    template: `<span>Hello</span>`,
+    methods: {
+      example(addPanelContainer) {
+        console.log(addSectionsContainer);
+      },
+    },
+  };
+}
+
+function siteDesignPanel() {
+  return {
+    panelName: 'My Site Design Panel',
+    template: `<span>Hello</span>`,
+    methods: {
+      example(designContainer) {
+        console.log(designContainer);
+      },
+    },
+  };
+}
+
+function myBizPanel() {
+  return {
+    panelName: 'My My Biz',
+    template: `<span>Hello</span>`,
+    methods: {
+      example(myBizPanelContainer) {
+        console.log(myBizPanelContainer);
+      },
+    },
+  };
+}
+
+function pagesPanel() {
+  return {
+    panelName: 'My Pages Panel',
+    template: `<span>Hello</span>`,
+    methods: {
+      example(pagesPanelContainer) {
+        console.log(pagesPanelContainer);
+      },
+    },
+  };
+}
+
+function appsPanel() {
+  return {
+    panelName: 'My Apps Panel',
+    template: `<span>Hello</span>`,
+    methods: {
+      example(appsPanelContainer) {
+        console.log(appsPanelContainer);
+      },
+    },
+  };
+}
+
+```
