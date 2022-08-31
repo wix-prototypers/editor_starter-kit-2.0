@@ -20,7 +20,7 @@ https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_prototype-starter-kit@0.2/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_prototype-starter-kit@0.3/src/App.js" />
 
 ```
 
@@ -35,7 +35,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title> Editor | Starter Kit </title>
       <link rel="stylesheet" href="./project.css" >
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.css">
+
       <link rel="icon" href="./Images/fav.png" type="image/x-icon">
    <body>
       <div id="stage" >
@@ -70,7 +70,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
         Panel Content here
       </div>
      <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.6/src/App.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_prototype-starter-kit@0.3/src/App.js"> </script>
 <script src="./project.js"> </script>
 </body>
 </html>
