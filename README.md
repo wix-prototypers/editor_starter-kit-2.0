@@ -1,4 +1,4 @@
-# **Editor Starter Kit 1.0 🚀**
+# **Wix Editor Prototoype Starter Kit 🚀**
 
 ![screnshot](https://github.com/wix-prototypers/editor_starter-kit/blob/master/screenshot.png)
 
