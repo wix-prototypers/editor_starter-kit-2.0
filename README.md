@@ -208,7 +208,7 @@ function onFloatingPanelHide() {
 
 In the current version the same function is invoked regardless of the panel's parent element.
 
-### **3.Using The Prototype API **
+### 3.Using The Prototype API
 
 <table>
   <tr>
@@ -258,7 +258,7 @@ In the current version the same function is invoked regardless of the panel's pa
   
 </table>
 
-### **More Functions and Entry Points**
+### 4.More Functions and Entry Points
 
 #### Custom Top-bar and Left-Bar
 
