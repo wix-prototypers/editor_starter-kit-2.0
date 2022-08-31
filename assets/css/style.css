@@ -1,0 +1,104 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  display: block;
+  margin: 8px;
+}
+h1 {
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+a {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: rrgb(204, 204, 204);
+  background-color: rgb(204, 204, 204);
+  margin: 30px 0px;
+  width: 200px;
+}
+ol {
+  padding-left: 16px;
+  font-size: 14px;
+}
+ol li {
+  margin-top: 8px;
+}
+
+.links-heading {
+  margin-bottom: -8px;
+}
+
+.main-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  max-width: 1012px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 28px;
+}
+.content-container {
+  display: grid;
+  min-width: 980px;
+  grid-template-columns: 1fr 1fr;
+}
+.right-side {
+  margin-right: 20px;
+  width: 600px;
+  height: 375px;
+  transform: translate(20px, 10px);
+}
+.right-side img {
+  max-width: 600px;
+  border: 1px solid #0000001c;
+}
+.left-side {
+  padding-left: 4px;
+  margin-top: -18px;
+}
+
+.project-details {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.project-description-heading {
+  margin: 12px 0px 8px 0px;
+}
+.project-description {
+  font-size: 14px;
+  margin-bottom: 24px;
+  width: 85%;
+}
+.variation-description {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
