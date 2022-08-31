@@ -1,6 +1,6 @@
 # **Wix Editor Prototoype Starter Kit 🚀**
 
-![screnshot](https://github.com/wix-prototypers/editor_starter-kit/blob/master/screenshot.png)
+![screnshot](https://github.com/wix-prototypers/editor_prototype-starter-kit/blob/master/screenshot.png)
 
 ### **Introduction**
 
@@ -208,7 +208,7 @@ function onFloatingPanelHide() {
 
 In the current version the same function is invoked regardless of the panel's parent element.
 
-### **3.Using The Prototype API 🔗**
+### **3.Using The Prototype API **
 
 <table>
   <tr>
@@ -257,3 +257,5 @@ In the current version the same function is invoked regardless of the panel's pa
   </tr>
   
 </table>
+
+### **More Functions and Entry Points**
