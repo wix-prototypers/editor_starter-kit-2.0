@@ -1,0 +1,539 @@
+:root {
+  --shadow: inset 2000px 0 0 0 rgb(23 51 70 / 80%);
+  --padding-modal: 48px;
+  --margin-modal-tb: 50px;
+  --margin-modal-lr: 102px;
+  --margin-bottom: 20px;
+
+  --small-size: 29.7%;
+  --medium-size: 45%;
+  --large-size: 55%;
+  --xlarge-size: 67.5%;
+  --xxlarge-size: 104.5%;
+}
+
+@media screen and (min-height: 900px) {
+  :root {
+    --margin-bottom: 50px;
+  }
+  .floating-panel {
+    z-index: 1000000;
+    user-select: auto;
+  }
+}
+
+@media screen and (min-height: 1020px) {
+  :root {
+    --margin-bottom: 110px;
+  }
+}
+
+[version="test"] {
+  display: none !important;
+}
+
+.floating-panel:not(.active) {
+  display: none !important;
+}
+.floating-panel * {
+  user-select: none;
+}
+
+.floating-panel.active {
+  display: block;
+  /* height: auto !important; */
+  box-shadow: 0 0 18px 0 rgba(22, 45, 61, 0.27);
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+
+  position: absolute;
+  width: calc(100vw - var(--margin-modal-lr));
+  height: calc(100vh - var(--margin-modal-tb));
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 400px;
+  border-top: 6px solid #116dff;
+  overflow: hidden;
+}
+.floating-panel.active {
+  z-index: 99999999999999 !important;
+}
+#First-Version.modal {
+  display: none;
+}
+.floating-panel .AddPagePanel-content {
+  display: none !important;
+}
+.floating-panel[content="add-store"] .AddPagePanel-content[value="add-store"] {
+  display: flex !important;
+  position: absolute;
+  top: 54px !important;
+  left: 125px;
+  height: calc(100% - 43px);
+  z-index: 99999;
+  overflow: hidden;
+  align-items: center;
+}
+.floating-panel[content="add-store"] .AddPagePanel-content[value="default"] {
+  display: none !important;
+}
+.floating-panel[content="add-store"] .AddPagePanel-sideMenu {
+  width: 190px !important;
+}
+.AddPagePanel-content[value="default"] {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.floating-panel .panel-header {
+  background: white;
+  height: 54px;
+  min-height: 54px;
+  padding: 0 18px 0 18px;
+  cursor: move;
+  border-bottom: 1px solid #e6e6e6;
+  font-weight: 600;
+}
+.floating-panel .buttons {
+  width: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.floating-panel {
+  color: black;
+  font-family: "Madefor";
+}
+
+.floating-panel-title {
+  color: black;
+  font-family: "Madefor";
+  font-weight: 900 !important;
+}
+
+.floating-panel-controls-btn {
+  display: flex;
+  justify-content: center;
+
+  color: black;
+
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.floating-panel-controls-btn * {
+  filter: brightness(900%);
+
+  fill: black;
+}
+.floating-panel-controls-btn svg.help {
+  filter: brightness(900%);
+  transform: translate(-1px, 1px);
+  fill: black;
+}
+
+.floating-panel-controls-btn:hover {
+  background: #00000009;
+}
+
+.AddPagePanel .floating-panel-content {
+  flex-direction: column;
+}
+.floating-panel-content {
+  flex: 1 0 auto;
+}
+
+.AddPagePanel .align-self-strech {
+  height: 100%;
+  max-height: calc(100vh - var(--margin-modal-tb) - 54px);
+}
+
+.FormSettings-sideMenu,
+.AddPagePanel-sideMenu {
+  box-sizing: border-box;
+  background-color: rgb(246, 251, 255);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(43, 86, 114);
+  white-space: nowrap;
+  padding: 30px 15px;
+  /* height: 588px; */
+  width: 220px;
+  border-radius: 0 0 0 8px;
+  font-family: "HelveticaNeueW01-55Roma";
+}
+
+.floating-panel-sideMenu-item.selected {
+  cursor: default;
+  border-radius: 100px;
+  box-shadow: 1px 1px 2px 0 rgba(255, 255, 255, 0.11),
+    inset 1px 1px 3px 0 rgba(0, 0, 0, 0.04);
+  background-color: rgb(211, 237, 255, 0.27);
+  color: var(--blue--main);
+}
+
+.floating-panel-sideMenu-item {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 6px 14px;
+  height: 18px;
+  width: fit-content;
+  margin-bottom: 4px;
+  cursor: pointer;
+
+  text-transform: capitalize;
+}
+.floating-panel-sideMenu-item * {
+  cursor: pointer;
+}
+
+.Floating-Btn {
+  border-radius: 20px;
+  padding: 6px 14px;
+  height: 20px;
+  width: 100px;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  text-transform: capitalize;
+  background-color: #3799eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Floating-Btn2 {
+  border-radius: 20px;
+  padding: 6px 14px;
+  height: 22px;
+  width: 130px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: rgb(55, 153, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 70px;
+  right: 220px;
+  color: white !important;
+  user-select: none;
+  z-index: 999999999999999 !important;
+}
+
+.Floating-Btn3 {
+  border-radius: 20px;
+  padding: 6px 14px;
+  height: 22px;
+  width: 130px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: rgb(55, 153, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 70px;
+  right: 220px;
+  color: white !important;
+  user-select: none;
+  z-index: 999999999999999 !important;
+}
+.lean .heading-1 {
+  margin-bottom: 10px;
+}
+
+.card-btns2 {
+  margin-top: 40px;
+}
+
+.card-btns2 .Floating-Btn2 {
+  position: relative;
+  bottom: 0px;
+  left: 10px;
+}
+
+.card-btns2 .Floating-Btn3 {
+  position: relative;
+  bottom: 0px;
+  left: 10px;
+}
+@media Screen and (min-width: 1600px) {
+  .Floating-Btn2 {
+    right: 180px;
+  }
+}
+
+.floating-panel-sideMenu-item:hover {
+  background: #d3edff;
+  color: var(--blue--main);
+}
+
+.AddPagePanel-subPanel-field:hover {
+  background: var(--blue--light);
+}
+
+.AddPagePanel-content {
+  width: 100%;
+  /* padding: 34px 44px; */
+  max-height: calc(100vh - 50px - 54px);
+  overflow: scroll;
+  position: relative;
+}
+
+.AddPagePanel-content .heading-1:not(.s) {
+  font-family: HelveticaNeueW01-55Roma;
+  font-size: 34px;
+  line-height: 36px;
+  color: #162d3d;
+}
+.AddPagePanel-content .heading-1.s {
+  font-family: HelveticaNeueW01-55Roma;
+  font-size: 22px;
+
+  color: #2b5672 !important;
+}
+
+.AddPagePanel-content .sub-heading {
+  font-size: 16px;
+  color: #2b5672 !important;
+  line-height: 1.7;
+  font-family: "HelveticaNeueW01-55Roma";
+}
+.sub-heading1 {
+  font-size: 16px;
+  color: #2b5672 !important;
+  line-height: 1.7;
+  font-family: "HelveticaNeueW01-45Ligh";
+}
+[value="add-store"] .AddPagePanel-content .sub-heading {
+  font-size: 16px;
+  font-family: HelveticaNeueW01-45Ligh;
+  color: #2b5672 !important;
+  line-height: 0.8;
+}
+
+.AddPagePanel-subPanel-inner {
+  overflow-y: auto;
+  height: 532px;
+}
+
+.AddPagePanel-subPanel-field {
+  height: 48px;
+  width: 100%;
+  padding: 0 20px 0 18px;
+  border-bottom: 1px solid #d9e1e8;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--font-color--main);
+  text-transform: capitalize;
+}
+
+.AddPagePanel .field-icon {
+  margin-right: 20px;
+}
+
+.AddPagePanel .field-action {
+  box-shadow: 0 0 0 2px #b1ddf8 inset;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  transform: scale(0.9);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.floating-panel .grid {
+  background: #fff;
+  z-index: 10000000000000000;
+  width: calc(100vw - var() - 176px - 48px);
+  /* padding: 34px 0px; */
+  align-self: self-end;
+  margin-left: 7vw;
+  position: absolute;
+  left: 0;
+  margin-top: 34px;
+}
+[value="add-store"] .grid {
+  background: #fff;
+  position: fixed;
+  z-index: 10000000000000000;
+  width: calc(100vw - var(--margin-modal-lr) - 176px - 48px);
+  padding: 34px var(--padding-modal) 30px;
+}
+.floating-panel .stores-grid {
+  background: transparent;
+  position: relative;
+  z-index: 10000000000000000;
+  color: #162d3d;
+  padding: 54px var(--padding-modal) 0px 0px;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: 450px;
+}
+.floating-panel .stores-grid * {
+  color: #162d3d;
+}
+
+.grid.unfixed {
+  position: unset;
+}
+
+.grid.unfixed ~ .grid-pages {
+  margin-top: 0;
+}
+
+.grid:not(.unfixed).scrollUp > span {
+  transition: 0.2s ease-out;
+}
+
+.grid:not(.unfixed).scrollUp {
+  box-shadow: 7px 2px 6px 0 rgba(22, 45, 61, 0.03),
+    14px 0px 0px rgba(22, 45, 61, 0.12);
+  padding: 18px var(--padding-modal) 18px;
+  transition: 0.1s ease-out;
+}
+
+.grid:not(.unfixed).scrollUp > span:last-child {
+  display: none;
+}
+
+.grid:not(.unfixed).scrollUp > span:first-child {
+  font-size: 16px;
+}
+.grid-heading {
+  position: absolute;
+  top: -80px;
+  left: 30px;
+}
+/*----------- pages grid ------------*/
+.grid-pages {
+  position: relative;
+  display: flex;
+  margin-bottom: var(--margin-bottom);
+  /* width: 906px; */
+  justify-content: space-evenly;
+  /* margin-left: 20px; */
+  /* height: 100%; */
+  min-width: 1008px;
+  margin-top: 115px;
+  max-width: 1166px;
+  width: calc(100vw - 350px);
+}
+.stores:not(.lean-container) {
+  display: flex;
+  margin-top: 40px !important;
+  width: 400px;
+  min-height: 500px !important;
+  margin-bottom: var(--margin-bottom);
+  /* width: 906px; */
+  justify-content: space-between;
+
+  /* height: 100%; */
+}
+.grid-pages {
+  position: relative;
+  display: flex;
+  margin-bottom: var(--margin-bottom);
+  /* width: 906px; */
+  justify-content: space-evenly;
+  /* margin-left: 20px; */
+  /* height: 100%; */
+  min-width: 1008px;
+  margin-top: 115px;
+}
+.grid-columns {
+  display: grid;
+  /* grid-template-columns: 280px; */
+  grid-gap: 48px;
+  width: fit-content;
+  min-width: 295px;
+  max-width: 340px;
+  width: calc(100vw - 1100px);
+}
+
+@media screen and (min-width: 1850px) {
+  .grid-heading {
+    margin-left: 10px !important;
+  }
+}
+/*
+Grid options:
+1 - no hight limitation
+2 - 4 Sizes
+3 - 5 Sizes
+4 - with scroll
+*/
+[grid-num="1"] {
+  --col1: var(--medium) var(--xlarge) var(--large);
+  --col2: var(--xxlarge) var(--xlarge) var(--small);
+  --col3: var(--large) var(--xlarge) var(--xlarge);
+}
+
+[grid-num="2"] {
+  --col1: var(--medium) var(--xlarge) var(--large);
+  --col2: var(--xlarge) var(--xlarge) var(--medium);
+  --col3: var(--large) var(--xlarge) var(--xlarge);
+}
+
+[grid-num="3"] {
+  --col1: var(--medium) var(--xlarge) var(--large) 110px;
+  --col2: var(--xxlarge) var(--xlarge) 110px;
+  --col3: var(--large) var(--xlarge) var(--xlarge);
+  /* --col1: 45% 67.5% 55%;
+  --col2: 104% 67.5% 29.7%;
+  --col3: 55% 67.5% 67.5%; */
+  /* --col1: 292px 446px 365px; */
+  /* --col2: 682px 446px 196px; */
+  /* --col3: 365px 446px 446px; */
+}
+
+[grid-num="4"] {
+  /* --col1: var(--scroll-s) var(--scroll-m) var(--scroll-m);
+  --col2: var(--scroll-l) var(--scroll-m) var(--scroll-m);
+  --col3: var(--scroll-m) var(--scroll-l) var(--scroll-s); */
+  --col1: var(--medium) var(--xlarge) var(--large);
+  --col2: var(--xlarge) var(--xlarge) var(--medium);
+  --col3: var(--large) var(--xlarge) var(--xlarge);
+}
+
+[grid-num="5"] {
+  --col1: var(--medium) var(--medium) var(--medium);
+  --col2: var(--medium) var(--medium) var(--medium);
+  --col3: var(--medium) var(--medium) var(--medium);
+}
+
+.first-col {
+  grid-template-rows: var(--col1);
+}
+
+.second-col {
+  grid-template-rows: var(--col2);
+}
+
+.thrid-col {
+  grid-template-rows: var(--col3);
+}
+
+.floating-panel .item {
+  top: 0;
+  transition: 0.1s ease-out;
+  min-height: 200px;
+  cursor: pointer;
+  margin-right: 24px;
+}
+.control-button {
+  cursor: pointer;
+}

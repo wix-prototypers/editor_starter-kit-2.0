@@ -1,0 +1,6 @@
+.section:not(.selected):not(.parent-select):not(.origin-section) .gridLines {
+  display: none;
+}
+.zoomMode .gridLines {
+  display: none;
+}

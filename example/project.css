@@ -1,0 +1,20 @@
+body {
+  font-family: "Madefor", "DM Serif Display", serif !important;
+  color: black !important;
+}
+#e0 {
+  font-size: 180px;
+}
+#s0 {
+  height: 800px;
+}
+#s1 {
+  height: 500px;
+}
+#s2 {
+  height: 500px;
+}
+
+.footer {
+  height: 100px;
+}

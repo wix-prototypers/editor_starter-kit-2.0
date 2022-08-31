@@ -1,0 +1,444 @@
+.section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Madefor Display";
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+.origin-section {
+  z-index: 9999;
+}
+
+.section.hovered {
+  z-index: 9999 !important;
+}
+.section.hovered.selected {
+  z-index: 999999999 !important;
+}
+.section.selected,
+.section.selected * {
+  z-index: 99999;
+}
+.section.parent-select,
+.section.parent-select * {
+  z-index: 5;
+}
+.section.hovered .element-container {
+  z-index: 3;
+}
+
+.section:before {
+  padding: 4px 12px 5px 12px;
+  font-size: 14px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.section.hovered:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  right: -1px;
+  background-color: var(--section-hover);
+  color: var(--section-selection);
+  z-index: 999999999999999999;
+  opacity: 1;
+}
+
+.section.selected:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  right: -1px;
+  background-color: var(--section-selection);
+  color: white;
+  z-index: 999999999999999999;
+  opacity: 1;
+}
+
+.section:not(.selected).hovered:after,
+.section.parent-select:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  outline: 3px solid var(--section-hover);
+}
+.section.parent-select:not(.selected):before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  right: -1px;
+  background-color: var(--section-hover);
+  color: var(--section-selection);
+}
+
+.attach-to-me:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  outline: 3px solid var(--section-selection);
+}
+
+.attach-to-me:after,
+.section:not(.selected):not(.parent-select).hovered:after {
+  background-color: #d9d2ff21;
+}
+.element-container:not(.section):hover:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  font-family: "Madefor";
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: var(--blue--light);
+  color: var(--blue--main);
+}
+
+.element-container:not(.section):not(.on-the-move).selected:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  font-family: "Madefor";
+  left: -1px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+  background-color: var(--blue--main);
+  color: white;
+}
+.element-container.on-the-move:before {
+  opacity: 0 !important;
+}
+.element-container:not(.section):not(.selected):hover:after {
+  outline: 1px solid var(--blue--light);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.section.selected .element-container:not(.selected):not(:hover):after {
+  outline: 1px solid var(--blue--main);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.section.header.selected .element-container:not(.selected):not(:hover):after,
+.section.footer.selected .element-container:not(.selected):not(:hover):after {
+  outline: 1px solid #ff6600;
+}
+.element-container.on-the-move:after {
+  outline: 1px solid var(--blue--main);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.element-container:not(.section).selected:after {
+  outline: 1px solid var(--blue--main);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.section.selected:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  outline: 3px solid var(--section-selection);
+  z-index: -100;
+}
+
+.edit-left #adi-panel[type="edit"] {
+  right: unset !important;
+  left: 60px !important;
+  top: 44px;
+}
+
+.element-container {
+  user-select: none;
+}
+.on-the-move {
+  cursor: move !important;
+}
+
+#stage.dragging .origin-section:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 6px) !important;
+  height: calc(100% - 6px) !important;
+  outline: 3px solid var(--section-hover);
+}
+#stage.dragging .origin-section:before {
+  content: attr(hat);
+  position: absolute;
+  top: -22px;
+  right: -1px;
+  font-size: 14px;
+  background-color: var(--section-hover);
+  color: var(--section-selection);
+  z-index: 999999999999;
+}
+
+.section.footer.selected:before {
+  content: "Footer";
+  position: absolute;
+  top: -22px;
+  right: -1px;
+  background-color: #fb6718;
+  color: white;
+  z-index: 999999999999999999;
+  opacity: 1;
+}
+.section.footer.parent-select:before {
+  content: "Footer";
+  position: absolute;
+  top: -22px;
+  right: -1px;
+  width: fit-content;
+  background-color: #fb6718;
+  color: white;
+  z-index: 999999999999999999;
+  opacity: 1;
+}
+
+.section.footer:not(.selected).hovered:before {
+  content: "Footer";
+  position: absolute;
+  top: -22px;
+  right: -1px;
+
+  background-color: #f9e3d4;
+  color: #fb6718;
+  z-index: 999999999999999999;
+  opacity: 1;
+}
+
+.section.footer:not(.selected).hovered {
+  z-index: 99;
+}
+
+.footer.parent-select:after,
+.footer.selected:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  outline: 3px solid #fb6718 !important;
+}
+.footer:not(.selected).hovered:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  outline: 3px solid #f9e3d4;
+  z-index: 9999999999999999;
+}
+#stage.dragging .origin-section.footer:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  outline: 3px solid #f9e3d4;
+}
+#stage.dragging .origin-section.footer:before {
+  content: "Footer";
+  position: absolute;
+  top: -22px;
+  left: -1px;
+  background-color: #f9e3d4;
+  color: #fb6718;
+  z-index: 9999999999999999;
+}
+#stage.dragging .attach-to-me.footer .attach-to-section {
+  display: flex;
+  position: absolute;
+  background-color: #fb6718;
+  color: white;
+  z-index: 999999999999;
+  padding: 6px 12px;
+  border-radius: 2px;
+  top: 10px;
+  left: calc(50% - 50px);
+  font-size: 14px;
+}
+.header:before {
+  top: 100% !important;
+  border-radius: 0px 0px 3px 3px !important;
+}
+
+.header.hovered:not(.selected):before,
+.header.parent-select:before {
+  top: 0 !important;
+  background-color: #f8cbb3 !important;
+  border-radius: 0px 0px 3px 3px !important;
+  color: #fb6718 !important;
+}
+.header.selected:before {
+  top: 0px !important;
+  /*   display: none; */
+}
+.header.parent-select:before {
+  /* display: none !important; */
+}
+.header {
+  height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px 0px 20px !important;
+  z-index: 0 !important;
+  transform: translate(0px, -2px);
+}
+
+.top-menu-items:not(.logo) {
+  right: 15px;
+  padding: 10px;
+}
+.footer .top-menu-items {
+  z-index: 999999999999 !important;
+}
+
+.header:hover:not(.selected):not(.parent-select):hover:after {
+  top: 0px !important;
+  left: 0px !important;
+  height: calc(100% - 3px) !important;
+  z-index: -10 !important;
+}
+
+.header:not(.selected).parent-select:after {
+  outline: 3px solid #f8cbb3 !important;
+}
+.header.selected:after {
+  outline: 3px solid #ff6600 !important;
+}
+#a0.Resize-Handle:before {
+  background-color: #ff6600 !important;
+}
+
+.header.selected:before {
+  background-color: #ff6600;
+}
+.header.hovered:before {
+  background-color: #ff6600;
+}
+
+.header.hovered:not(.selected):after {
+  background-color: #ffb08620 !important;
+  outline: none !important;
+  border: 3px solid #ffc9ac !important;
+}
+.footer.selected:after {
+  outline: 3px solid #ff6600 !important;
+}
+
+.footer.selected:before {
+  background-color: #ff6600;
+}
+
+.top-menu-items .menu-item {
+  pointer-events: none;
+}
+.header .top-menu-items #gfpp {
+  transform: translate(-100px, 120px) !important;
+}
+
+.top-menu-items.selected:after {
+  outline: 1px solid #ff6600 !important;
+}
+
+.top-menu-items.selected:before {
+  background-color: #ff6600 !important;
+}
+
+.top-menu-items:hover:not(.selected):before {
+  background-color: #ffcaae !important;
+  color: #ff6600;
+}
+
+.top-menu-items.selected:before {
+  background-color: #ff6600;
+}
+
+.top-menu-items:before {
+  border-radius: 0px 0px 3px 3px !important;
+}
+.top-menu-items:hover:not(.selected):after {
+  content: "";
+  border: 1px solid #ffcaae !important;
+  position: absolute;
+  outline: none !important;
+  top: 0px !important;
+  left: 0px !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+.top-menu-items:hover:not(.selected) {
+  content: "";
+  border: 0px solid #ffcaae !important;
+}
+.element-container.selected {
+  z-index: 99999;
+}
+.attach-banner {
+  display: none;
+}
+.attach-to-me .attach-banner {
+  display: unset;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  background-color: var(--section-selection);
+  padding: 6px 12px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+}
+
+.section:not(.selected):not(.parent-select) .element-container {
+  pointer-events: none !important;
+}
+.Add-Section[section="footer"] {
+  display: none;
+}
+.Resize-Handle[section="footer"]:before {
+  background-color: #fb6718 !important;
+}
+.zoomMode .section:before {
+  transform: scale(2) translate(-25%, -25%);
+}
+.zoomMode .section.header:before {
+  transform: scale(2) translate(-25%, 3px);
+}
