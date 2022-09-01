@@ -1,6 +1,6 @@
 //icons and images
 
-import * as icons from "./icons.js";
+import * as icons from './icons.js';
 
 const header = (title) =>
   `<div class="panel-header">
@@ -28,7 +28,7 @@ const header = (title) =>
 </div>`;
 
 export const addPanelContent = `<div class="panel-wrapper add-panel" type="regular">
-${header("Add Elements")}
+${header('Add Elements')}
 <div class="panel-content">
   <ul class="sub-category-list" style="background-color:#F7F8F8">
     <li class="category pages ">
@@ -366,13 +366,13 @@ export const appsContent = `
       </div>
    
 <div class="panel-content">
-<img src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.6/src/Images/apps.png" style="width: 100%; min-height:650px !important;   z-index:-10 !important;">
+<img src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit@1.6/src/imagesapps.png" style="width: 100%; min-height:650px !important;   z-index:-10 !important;">
 </div>
 </div>`;
 
 export const myBizContent = `
 <div class="panel-wrapper my-biz-panel">
-${header("My Business")}
+${header('My Business')}
 <div class="panel-content">
 </div>
 </div>
@@ -380,7 +380,7 @@ ${header("My Business")}
 
 export const pagesPanel = `
 <div panelcontent="pages" pages="default" class="panel-wrapper pages-panel">
-${header("Site Pages")}
+${header('Site Pages')}
 <div class="panel-content" style="margin-top:8px">
   <ul class="sub-category-list" style="background-color:#F7F8F8; width:150px; padding-top:16px; transform: translate(0px,-8px);">
     <li class="category pages selected">
@@ -553,7 +553,7 @@ ${header("Site Pages")}
 
 export const addSectionsContent = `
 <div class="panel-wrapper add-sections">
-${header("Add Sections")}
+${header('Add Sections')}
 <div class="panel-content">
 </div>
 </div>`;

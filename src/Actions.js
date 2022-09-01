@@ -1,9 +1,6 @@
-import {
-  deselectAll,
-  select,
-} from "./modules/SelectionModel/SelectionModel.js";
+import { select } from "./modules/SelectionModel/SelectionModel.js";
 
-import { titleCase } from "./Utils/functions.js";
+import { titleCase } from "./utils/functions.js";
 import { Gfpp } from "./modules/GFPP/gfpp.js";
 import { Resizable } from "./modules/Resize/Resize.js";
 
@@ -13,7 +10,6 @@ export const Actions = {
   selectedElement(element) {
     if (!element.classList.contains("selected")) {
       select(element);
-
       if (!element.querySelector("#gfpp")) {
         Gfpp();
         DragNDrop();

@@ -53,16 +53,8 @@ export const AddSection = (state, setState) => {
 
         stage.classList.remove("hide-ph");
         let id = e.target.closest(".Add-Section").id;
-        let realIndex = parseInt(id.split("a")[1]) + 1;
-        let placeholder = document.querySelector(`#ph${realIndex}`);
 
-        setState(state, "panel", {
-          isOpen: true,
-          type: "add",
-          title: "Add to Section",
-          panelContent: "sections",
-          sectionPlaceholder: placeholder,
-        });
+        setState(state, "leftPanel", "sections");
       };
     });
   });

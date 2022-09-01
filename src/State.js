@@ -1,68 +1,27 @@
 import { Actions } from "./Actions.js";
 
-export function State(
-  state = {
+//Create a Proxy Object that will be used to update the state amd call actions (imported above).
+
+export const State = (
+  initialState = {
     leftPanel: "close",
     zoomMode: false,
     selectedElement: null,
   }
-) {
-  class PubSub {
-    constructor() {
-      this.events = {};
-    }
-
-    subscribe(event, callback) {
-      if (!this.events.hasOwnProperty(event)) {
-        return;
-      }
-      return this.events[event].push(callback);
-    }
-
-    publish(event, data = {}) {
-      this.events = { ...this.events, event: { Name: event, type: data } };
-      return this.events;
-    }
-  }
-
-  class Storeducer {
-    constructor(state) {
-      this.events = new PubSub();
-      this.state = new Proxy(state || {}, {
-        get: (state, key) => {
-          return state[key];
-        },
-        set: (state, key, value) => {
-          state[key] = value;
-          /*    console.log(
-            `%c State Change:`,
-            "background: #222; color: #00cccc",
-            state
-          ); */
-          this.events.publish(key, value);
-
-          Actions[key] && Actions[key].call(this, value);
-
-          return true;
-        },
-
-        subscribe(event, callback) {
-          this.events.subscribe(event, callback);
-        },
-        destroyStateItem(trust, state = null, item) {
-          if (state && trust) {
-            state[item] = undefined;
-          }
-        },
-      });
-    }
-
-    syncState() {
-      this.events.publish("stateChange", this.state);
-    }
-  }
-  return new Storeducer(state);
-}
+) => {
+  const state = new Proxy(initialState, {
+    get: (state, key) => {
+      return state[key];
+    },
+    set: (state, key, value) => {
+      state[key] = value;
+      Actions[key] && Actions[key].call(this, value);
+      return true;
+    },
+  });
+  window.state = state;
+  return state;
+};
 
 export const setState = (state, key, val) => {
   state[key] = val;

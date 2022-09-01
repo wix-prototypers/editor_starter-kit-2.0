@@ -2,7 +2,7 @@ import { DragNDropElements } from "../dragNDropElements/dragNDropElements.js";
 import { Gfpp } from "../GFPP/gfpp.js";
 import { Resizable } from "../Resize/Resize.js";
 import { hideFloatingPanels } from "../../modules/FloatingPanel/FloatingPanel.js";
-import { updatesectionActionsTop } from "../sectionActions/sectionActions.js";
+import { updateSectionActionsTop } from "../sectionActions/sectionActions.js";
 import { showAddSection } from "../AddSection/AddSection.js";
 
 //Append Styles
@@ -106,7 +106,7 @@ export function selectionModel(state, setState) {
     (section) =>
       (section.onmouseenter = (e) => {
         hoverOn(section, e.pageY);
-        updatesectionActionsTop(state);
+        updateSectionActionsTop(state);
 
         const editor = document.querySelector("#editor");
       })

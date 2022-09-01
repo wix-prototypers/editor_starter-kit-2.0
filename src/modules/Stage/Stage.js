@@ -1,4 +1,4 @@
-import { updatesectionActionsTop } from "../../modules/sectionActions/sectionActions.js";
+import { updateSectionActionsTop } from "../../modules/sectionActions/sectionActions.js";
 
 import { deselect } from "../SelectionModel/SelectionModel.js";
 
@@ -20,7 +20,7 @@ if (!exists) {
 const stage = document.querySelector("#stage");
 
 stage.onscroll = () => {
-  updatesectionActionsTop(state);
+  updateSectionActionsTop(state);
 };
 
 stage.onmouseleave = (e) => {

@@ -8,7 +8,7 @@ import {
   hideFloatingPanels,
   showPanel,
 } from "../../modules/FloatingPanel/FloatingPanel.js";
-import { updatesectionActionsTop } from "../sectionActions/sectionActions.js";
+import { updateSectionActionsTop } from "../sectionActions/sectionActions.js";
 
 var mousePosY = 0;
 const TOP_BAR_HEIGHT = 90;
@@ -81,7 +81,7 @@ export function DragNDropElements() {
               document
                 .querySelectorAll(".attach-to-me")
                 .forEach((section) => section.classList.remove("attach-to-me"));
-              updatesectionActionsTop(state);
+              updateSectionActionsTop(state);
             }, 0);
 
             document.onmousemove = null;

@@ -36,7 +36,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       <title> Editor | Starter Kit </title>
       <link rel="stylesheet" href="./project.css" >
 
-      <link rel="icon" href="./Images/fav.png" type="image/x-icon">
+      <link rel="icon" href="./imagesfav.png" type="image/x-icon">
    <body>
       <div id="stage" >
          <div class="template">

@@ -1,7 +1,7 @@
 //Append Styles
 /* var href = "../../src/modules/FloatingPanel/floating-panel.css"; */
 
-import { getCoords, getSize } from "../../Utils/functions.js";
+import { getCoords, getSize } from "../../utils/functions.js";
 var href = `${window.originUrl}/src/modules/FloatingPanel/floating-panel.css`;
 
 let exists = false;

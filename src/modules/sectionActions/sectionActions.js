@@ -1,5 +1,5 @@
 import { sectionActionsBtns } from "./sectionActions_data.js";
-import { getCoords, getSize } from "../../Utils/functions.js";
+import { getCoords, getSize } from "../../utils/functions.js";
 import { select, hoverOn } from "../SelectionModel/SelectionModel.js";
 
 //Append Styles
@@ -228,7 +228,7 @@ export const sectionActions = (state, setState) => {
   });
 };
 
-export function updatesectionActionsTop(state) {
+export function updateSectionActionsTop(state) {
   const zoomMode = document.querySelector(".zoomMode") ? true : false;
   let topStage = 90;
   let bottomStage = window.innerHeight - 200;
@@ -293,7 +293,7 @@ export function hidesectionActions() {
   sectionActions.style.opacity = 0;
 }
 
-export function updatesectionActionsTopOnResizeandScroll() {
+export function updateSectionActionsTopOnResizeandScroll() {
   let sectionActions = document.querySelector("#sectionActions");
   let section = document.querySelector(
     `.section#${sectionActions.getAttribute("section")}`
