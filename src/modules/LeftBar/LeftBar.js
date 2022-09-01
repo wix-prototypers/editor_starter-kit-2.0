@@ -14,6 +14,8 @@ if (!exists) {
   link.href = href;
   link.rel = "stylesheet";
   document.getElementsByTagName("head")[0].appendChild(link);
+
+  
 }
 const stage = document.querySelector("#stage");
 const body = document.querySelector("body");

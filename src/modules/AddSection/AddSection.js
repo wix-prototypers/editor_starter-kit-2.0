@@ -53,7 +53,6 @@ export const AddSection = (state, setState) => {
 
         stage.classList.remove("hide-ph");
         let id = e.target.closest(".Add-Section").id;
-
         setState(state, "leftPanel", "sections");
       };
     });
