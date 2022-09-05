@@ -1,6 +1,6 @@
 # **Wix Editor Prototoype Starter Kit 🚀**
 
-![screnshot](https://github.com/wix-prototypers/editor_prototype-starter-kit/blob/master/screenshot.png)
+![screnshot](https://github.com/wix-prototypers/editor_starter-kit-2.0/blob/master/screenshot.png)
 
 ### **Introduction**
 
@@ -20,7 +20,7 @@ https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 Add the following links in your prototype's index file.
 
 ```HTML
-<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_prototype-starter-kit@0.4/src/App.js" />
+<script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit-2.0@0.5/src/App.js" />
 
 ```
 
@@ -70,7 +70,7 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
         Panel Content here
       </div>
      <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_prototype-starter-kit@0.4/src/App.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit-2.0@0.5/src/App.js"> </script>
 <script src="./project.js"> </script>
 </body>
 </html>

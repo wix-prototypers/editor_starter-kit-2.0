@@ -1,5 +1,5 @@
 const source = "cdn"; //choose code source, local or cdn
 originUrl =
   source === "cdn"
-    ? "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_prototype-starter-kit@0.4"
+    ? "https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit-2.0@0.5"
     : "..";

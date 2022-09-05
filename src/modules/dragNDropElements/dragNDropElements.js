@@ -10,7 +10,7 @@ import {
 } from "../../modules/FloatingPanel/FloatingPanel.js";
 import { updateSectionActionsTop } from "../sectionActions/sectionActions.js";
 
-var mousePosY = 0;
+let mousePosY = 0;
 const TOP_BAR_HEIGHT = 90;
 const LEFT_BAR_WIDTH = 58;
 const stage = document.querySelector("#stage");
@@ -50,7 +50,6 @@ export function DragNDropElements() {
             deselectAllChildren();
             deselectAll();
             item.classList.add("on-the-move");
-
             stage.classList.add("dragging");
             body.classList.add("dragging");
 
@@ -66,11 +65,6 @@ export function DragNDropElements() {
           };
 
           document.onmouseup = function (e) {
-            setTimeout(function () {
-              activePanel && showPanel(activePanel, item.id);
-              gfppSelected && gfppSelected.classList.add("selected");
-            });
-
             event.stopPropagation();
 
             item.classList.remove("on-the-move");
@@ -94,6 +88,11 @@ export function DragNDropElements() {
             item.closest(".section")?.classList.add("parent-select");
             locatesectionAndAttach(e, shiftY, item);
             document.onmouseup = null;
+
+            setTimeout(function () {
+              activePanel && showPanel(activePanel, item.id);
+              gfppSelected && gfppSelected.classList.add("selected");
+            });
           };
         }
       });
@@ -156,7 +155,6 @@ function locatesectionAndAttach(e, shiftX, shiftY, item) {
       item.style.top = top - sectionTop + "px";
       item.style.left = Math.ceil(e.pageX - LEFT_BAR_WIDTH - shiftX) + "px";
       item.closest(".section")?.removeChild(item);
-
       document.querySelector(`#s${sectionIndex}`)?.appendChild(item);
     }
   }
