@@ -24,12 +24,11 @@ body {
   width: calc(100% - 60px);
   left: 60px;
   border-radius: 3px;
-
   min-width: 980px;
 }
 
 #stage .template {
-  background-color: var(--template-light);
+  background-color: white;
   margin-bottom: 90px;
   box-shadow: -2px -7px 9px 7px rgb(0 0 0 / 13%);
   margin-bottom: 60px;
