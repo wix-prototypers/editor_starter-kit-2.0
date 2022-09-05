@@ -1,24 +1,18 @@
 //Append Styles
+import { appendStyles } from "../../styles/EditorStyles.js";
 import { icons } from "./left-bar-icons.js";
+appendStyles(`modules/LeftBar/left-bar.css`);
 
-var href = `${window.originUrl}/src/modules/LeftBar/left-bar.css`;
-
-let exists = false;
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-
-  
-}
 const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
+
+/**
+ * Create LeftBar
+ * @param {object} state
+ * @param {function} setState
+ * @param {Array} leftBarItems
+ */
+
 export const LeftBar = (
   state,
   setState,

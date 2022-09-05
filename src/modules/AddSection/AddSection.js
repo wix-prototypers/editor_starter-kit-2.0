@@ -1,20 +1,6 @@
 import { hoverOn, select } from "../SelectionModel/SelectionModel.js";
-
-//Append Styles
-const href = `${window.originUrl}/src/modules/AddSection/add-section.css`;
-
-const exists = false;
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
+import { appendStyles } from "../../styles/EditorStyles.js";
+appendStyles(`modules/AddSection/add-section.css`);
 
 export const AddSection = (state, setState) => {
   /**

@@ -1,11 +1,10 @@
 import { select } from "./modules/SelectionModel/SelectionModel.js";
-
-import { titleCase } from "./utils/functions.js";
 import { Gfpp } from "./modules/GFPP/gfpp.js";
 import { Resizable } from "./modules/Resize/Resize.js";
 
 export const Actions = {
-  //Actions
+  //Actions are function that are called when the state changes.
+  // If the key that has changed is name with the name of an action, it will be called.
 
   selectedElement(element) {
     if (!element.classList.contains("selected")) {

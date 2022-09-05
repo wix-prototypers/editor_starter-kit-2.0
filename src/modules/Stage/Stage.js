@@ -1,21 +1,8 @@
 import { updateSectionActionsTop } from "../../modules/sectionActions/sectionActions.js";
-
 import { deselect } from "../SelectionModel/SelectionModel.js";
+import { appendStyles } from "../../styles/EditorStyles.js";
 
-//Append Styles
-const href = `${window.originUrl}/src/modules/Stage/stage.css`;
-let exists = false;
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
+appendStyles(`modules/Stage/stage.css`);
 
 const stage = document.querySelector("#stage");
 

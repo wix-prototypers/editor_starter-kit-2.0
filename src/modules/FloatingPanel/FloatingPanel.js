@@ -2,20 +2,8 @@
 /* var href = "../../src/modules/FloatingPanel/floating-panel.css"; */
 
 import { getCoords, getSize } from "../../utils/functions.js";
-var href = `${window.originUrl}/src/modules/FloatingPanel/floating-panel.css`;
-
-let exists = false;
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
+import { appendStyles } from "../../styles/EditorStyles.js";
+appendStyles(`modules/FloatingPanel/floating-panel.css`);
 
 import * as icons from "./icons.js";
 

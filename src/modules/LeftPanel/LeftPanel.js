@@ -7,24 +7,12 @@ import {
   appsContent,
 } from "./leftPanelContent.js";
 
+import { appendStyles } from "../../styles/EditorStyles.js";
+
+appendStyles(`modules/LeftPanel/left-panel.css`);
+
 const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
-//Append Styles
-var href = `${window.originUrl}/src/modules/LeftPanel/left-panel.css`;
-
-const exists = false;
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
-
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
 
 export const LeftPanel = (state, setState) => {
   let container = document.querySelector("#left-panel");

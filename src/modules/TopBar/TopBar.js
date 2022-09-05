@@ -2,19 +2,9 @@ import { icons } from "./top-bar-icons.js";
 
 //Append Styles
 var href = `${window.originUrl}/src/modules/TopBar/top-bar.css`;
-var exists = false;
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
+import { appendStyles } from "../../styles/EditorStyles.js";
 
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
+appendStyles(`modules/TopBar/top-bar.css`);
 
 //icons and images
 const { logo, chev, search, desktop2, mobile2, undo2, redo2, tools } = icons;
@@ -117,7 +107,7 @@ export const TopBar = (state, setState) => {
 
   <div class="bordered" style="height: 100%;"></div>
     <div class="topbar-item icon-item flex justify-center align-center  undo">
-      ${undo2} 
+    ${undo2} 
     </div>
     <div class="topbar-item icon-item flex justify-center align-center  redo ">
    ${redo2} 

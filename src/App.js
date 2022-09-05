@@ -4,6 +4,7 @@ import { setState, State } from "./State.js";
 
 (function App() {
   const editor = document.querySelector("#editor");
+  //insert container divs for the editor main parts
   editor.insertAdjacentHTML(
     "afterbegin",
     `<section id="left-panel"></section>
@@ -11,8 +12,8 @@ import { setState, State } from "./State.js";
     <section id="top-bar"></section>
     <section id="panel-frame"></section>`
   );
-
+  //Activate state
   const state = State();
+  //Activate modules, with editor state
   modules(state, setState);
-  appendStyles();
 })();

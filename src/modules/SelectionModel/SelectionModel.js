@@ -5,21 +5,9 @@ import { hideFloatingPanels } from "../../modules/FloatingPanel/FloatingPanel.js
 import { updateSectionActionsTop } from "../sectionActions/sectionActions.js";
 import { showAddSection } from "../AddSection/AddSection.js";
 
-//Append Styles
-const href = `${window.originUrl}/src/modules/SelectionModel/SelectionModel.css`;
+import { appendStyles } from "../../styles/EditorStyles.js";
 
-var exists = false;
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
+appendStyles(`modules/SelectionModel/SelectionModel.css`);
 
 export function select(eleme) {
   deselectAll();

@@ -3,22 +3,9 @@ import { getCoords, getSize } from "../../utils/functions.js";
 import { select, hoverOn } from "../SelectionModel/SelectionModel.js";
 
 //Append Styles
-const href = `${window.originUrl}/src/modules/sectionActions/sectionActions.css`;
-let exists = false;
 
-document.querySelectorAll("link").forEach((link) => {
-  if (link.getAttribute("href") === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement("link");
-  link.href = href;
-
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
-
+import { appendStyles } from "../../styles/EditorStyles.js";
+appendStyles(`modules/sectionActions/sectionActions.css`);
 const stage = document.querySelector("#stage");
 
 export const sectionActions = (state, setState) => {

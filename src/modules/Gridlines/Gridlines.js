@@ -1,17 +1,5 @@
-//Append Styles
-const href = `${window.originUrl}/src/modules/Gridlines/Gridlines.css`;
-const exists = false;
-document.querySelectorAll('link').forEach((link) => {
-  if (link.getAttribute('href') === href) {
-    exists = true;
-  }
-});
-if (!exists) {
-  var link = document.createElement('link');
-  link.href = href;
-  link.rel = 'stylesheet';
-  document.getElementsByTagName('head')[0].appendChild(link);
-}
+import { appendStyles } from "../../styles/EditorStyles.js";
+appendStyles(`modules/Gridlines/Gridlines.css`);
 
 /**
  * Create Gridlines and append to every section
@@ -20,7 +8,7 @@ if (!exists) {
  */
 
 export const GridLines = (state, setState) => {
-  let sections = document.querySelectorAll('#stage .section');
+  let sections = document.querySelectorAll("#stage .section");
   setTimeout(() => {
     //wait for all sections
     sections.forEach((section, i) => {
@@ -28,7 +16,9 @@ export const GridLines = (state, setState) => {
       const height = section.getBoundingClientRect().height;
       let GridLinesContainer = `
     <div class="gridLines" style="position:absolute; left:calc(50% - 490px);">
-    <svg width="980" height="${height}" viewBox="0 0 981 ${height - 2}" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="980" height="${height}" viewBox="0 0 981 ${
+        height - 2
+      }" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M980.5 0V${height}" stroke="white"/>
     <path d="M0.5 0V${height}" stroke="white"/>
     <path d="M980.5 0V${height}" stroke="black" stroke-width="0.5" stroke-dasharray="5 5"/>
@@ -37,7 +27,7 @@ export const GridLines = (state, setState) => {
     </div>
     `;
 
-      section.insertAdjacentHTML('afterbegin', GridLinesContainer);
+      section.insertAdjacentHTML("afterbegin", GridLinesContainer);
     });
-  }, 500);
+  }, 1000);
 };
