@@ -8,7 +8,6 @@ import {
 } from "./leftPanelContent.js";
 
 import { appendStyles } from "../../styles/EditorStyles.js";
-
 appendStyles(`modules/LeftPanel/left-panel.css`);
 
 const stage = document.querySelector("#stage");
@@ -60,13 +59,11 @@ export const LeftPanel = (state, setState) => {
     container.querySelectorAll(".panel-header .close-panel").forEach(
       (close) =>
         (close.onclick = (e) => {
-          body.classList.contains("return100");
-
           state.leftPanel = "close";
           setState(state, "leftPanel", "close");
           setState(state, "zoomMode", false);
-          stage.classList.remove("panneled");
-          body.classList.remove("panneled");
+          stage.classList.remove("hasPanel");
+          body.classList.remove("hasPanel");
         })
     );
   });

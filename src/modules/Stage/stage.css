@@ -55,7 +55,7 @@ body {
   width: calc(100vw - 100px) !important;
 }
 
-#stage.zoomMode.panneled {
+#stage.zoomMode.hasPanel {
   left: 250px;
   transition: left 0.35s !important;
   overflow: visible;
@@ -555,7 +555,7 @@ body.is-touch .tiles blogBox .content {
   right: 0px;
   transform: translate(calc(-50vw / 2 + 80px), 0px) !important;
 }
-.zoomMode.panneled #sectionActions {
+.zoomMode.hasPanel #sectionActions {
   right: 0px;
   transform: translate(calc(-50vw / 2 + 270px), 0px) !important;
 }

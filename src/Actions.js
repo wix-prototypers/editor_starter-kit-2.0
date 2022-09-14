@@ -80,8 +80,8 @@ export const Actions = {
             .querySelector("#left-panel")
             .setAttribute("show-panel", "design");
           state.zoomMode = true;
-          stage.classList.add("panneled");
-          body.classList.add("panneled");
+          stage.classList.add("hasPanel");
+          body.classList.add("hasPanel");
 
           break;
         }
@@ -103,8 +103,8 @@ export const Actions = {
             .querySelector("#left-panel")
             .setAttribute("show-panel", "sections");
           state.zoomMode = true;
-          stage.classList.add("panneled");
-          body.classList.add("panneled");
+          stage.classList.add("hasPanel");
+          body.classList.add("hasPanel");
           break;
         }
       }

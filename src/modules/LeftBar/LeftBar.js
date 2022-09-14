@@ -62,14 +62,14 @@ ${icons[item.toLowerCase()]}
       ) {
         setState(state, "leftPanel", "close");
         setState(state, "zoomMode", false);
-        stage.classList.remove("panneled");
-        body.classList.remove("panneled");
+        stage.classList.remove("hasPanel");
+        body.classList.remove("hasPanel");
         return;
       }
 
       setState(state, "zoomMode", false);
-      stage.classList.remove("panneled");
-      body.classList.remove("panneled");
+      stage.classList.remove("hasPanel");
+      body.classList.remove("hasPanel");
       document
         .querySelectorAll(`.leftbar-item.selected`)
         .forEach((selected) => selected.classList.remove("selected"));

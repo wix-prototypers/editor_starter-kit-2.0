@@ -35,46 +35,50 @@ The following HTML snippet will genrate the editor and a basic site (header,foot
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title> Editor | Starter Kit </title>
       <link rel="stylesheet" href="./project.css" >
-
       <link rel="icon" href="./imagesfav.png" type="image/x-icon">
-   <body>
+  <body>
+      <div id="editor">
       <div id="stage" >
          <div class="template">
-            <div class="element-container strip header" hat="Header" gfpp="Manage-Items animation">
-               <div class="element-container logo top-menu-items" hat="Text"><span>Hello</span></div>
-               <div class="element-container top-menu-items" gfpp="Manage-Menu Navigate layout design animation help" hat="Horizontal Menu">
+            <div class="element-container section header" type="header" id="s0" hat="Header" gfpp="Manage-Items animation">
+               <div class="element-container draggable resizable logo top-menu-items" hat="Text"><span>Hello</span></div>
+               <div class="element-container draggable resizable top-menu-items"  hat="Horizontal Menu">
                   <div class="menu-item" value="home">Home</div>
                   <div class="menu-item" value="upcoming-shows">Upcoming Shows</div>
                   <div class="menu-item" value="about">About</div>
-                  <div class="menu-item" value="videos">Videos</div>
+                   <div class="menu-item" value="videos">Videos</div>
                   <div class="menu-item" value="gallery">Gallery</div>
                   <div class="menu-item" value="contact">Contact</div>
                   <div class="menu-item" value="writing">Writing</div>
                </div>
             </div>
-            <div class="element-container strip hero" hat="Strip" id="s0" >
-               <div class="element-container resizable draggable" id="e0" hat="Title" gfpp="Edit-Text animation design help">
+            <div class="element-container section"  hat="Section : Hello" type="section"  id="s1" gfpp="Manage-Media strech design help">
+               <div class="element-container draggable resizable" id="e0" hat="Title" gfpp="Manage-Media strech design help">
                   <div class="text-content">
-                     Hello
+                     Hello 2.0
                   </div>
                </div>
             </div>
-            <div class="element-container strip"  hat="Strip" id="s1" >
 
+            <div class="element-container section hero"hat="Section : Hello" id="s2" type="section" >
             </div>
 
+            <div class="element-container section footer" type="footer" id="s4" hat="Header" gfpp="Manage-Items animation">
+            </div>
          </div>
       </div>
-      <div id="editor"></div>
-      <div class="floating-panel" element="e0" gfpp-trigger="Edit-Text" data-title="Hello Panel" >
+
+
+
+   <div class="floating-panel" element="e0" top="0" left="0" gfpp-trigger="Manage-Media" data-data-title="Hello Panel" >
         Panel Content here
       </div>
-     <script src="https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_prototype-panel@2/dist/prototypePanel.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/wix-prototypers/editor_starter-kit-2.0@0.6/src/App.js"> </script>
+   </div>
+<script  src="../src/config.js"> </script>
+<script type="module" src="../src/App.js"> </script>
 <script src="./project.js"> </script>
 </body>
 </html>
-
 ```
 
 ### **2.Using Snippets 🔗**
