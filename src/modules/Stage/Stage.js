@@ -2,7 +2,7 @@ import { updateSectionActionsTop } from "../../modules/sectionActions/sectionAct
 import { deselect } from "../SelectionModel/SelectionModel.js";
 import { appendStyles } from "../../styles/EditorStyles.js";
 
-appendStyles(`modules/Stage/stage.css`);
+appendStyles(`src/modules/Stage/stage.css`);
 
 const stage = document.querySelector("#stage");
 

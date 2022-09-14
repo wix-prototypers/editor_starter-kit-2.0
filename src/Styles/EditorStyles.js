@@ -1,12 +1,12 @@
 var hrefs = [
-  `Styles/fonts.css`,
-  `Styles/normalize.css`,
-  `Styles/ptyp.css`,
-  `Styles/variables.css`,
+  `src/Styles/fonts.css`,
+  `src/Styles/normalize.css`,
+  `src/Styles/ptyp.css`,
+  `src/Styles/variables.css`,
 ];
 
 export const appendStyles = (href) => {
-  const url = `${window.originUrl}/src/${href}`;
+  const url = `${window.originUrl}/${href}`;
   var exists = false;
   document.querySelectorAll("link").forEach((link) => {
     if (link.getAttribute("href") === url) {

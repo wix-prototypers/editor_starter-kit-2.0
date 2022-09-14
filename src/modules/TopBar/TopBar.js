@@ -4,7 +4,7 @@ import { icons } from "./top-bar-icons.js";
 var href = `${window.originUrl}/src/modules/TopBar/top-bar.css`;
 import { appendStyles } from "../../styles/EditorStyles.js";
 
-appendStyles(`modules/TopBar/top-bar.css`);
+appendStyles(`src/modules/TopBar/top-bar.css`);
 
 //icons and images
 const { logo, chev, search, desktop2, mobile2, undo2, redo2, tools } = icons;

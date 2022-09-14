@@ -8,7 +8,7 @@ import {
 } from "./leftPanelContent.js";
 
 import { appendStyles } from "../../styles/EditorStyles.js";
-appendStyles(`modules/LeftPanel/left-panel.css`);
+appendStyles(`src/modules/LeftPanel/left-panel.css`);
 
 const stage = document.querySelector("#stage");
 const body = document.querySelector("body");

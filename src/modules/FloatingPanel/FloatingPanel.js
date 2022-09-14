@@ -3,7 +3,7 @@
 
 import { getCoords, getSize } from "../../utils/functions.js";
 import { appendStyles } from "../../styles/EditorStyles.js";
-appendStyles(`modules/FloatingPanel/floating-panel.css`);
+appendStyles(`src/modules/FloatingPanel/floating-panel.css`);
 
 import * as icons from "./icons.js";
 

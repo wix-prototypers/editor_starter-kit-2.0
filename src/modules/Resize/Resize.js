@@ -1,7 +1,7 @@
 import * as icons from "./icons.js";
 
 import { appendStyles } from "../../styles/EditorStyles.js";
-appendStyles(`modules/Resize/Resize.css`);
+appendStyles(`src/modules/Resize/Resize.css`);
 
 export const Resizable = () => {
   const elements = document.querySelectorAll(

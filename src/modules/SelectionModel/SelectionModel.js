@@ -6,8 +6,7 @@ import { updateSectionActionsTop } from "../sectionActions/sectionActions.js";
 import { showAddSection } from "../AddSection/AddSection.js";
 
 import { appendStyles } from "../../styles/EditorStyles.js";
-
-appendStyles(`modules/SelectionModel/SelectionModel.css`);
+appendStyles(`src/modules/SelectionModel/SelectionModel.css`);
 
 export function select(eleme) {
   deselectAll();

@@ -5,7 +5,7 @@ import { select, hoverOn } from "../SelectionModel/SelectionModel.js";
 //Append Styles
 
 import { appendStyles } from "../../styles/EditorStyles.js";
-appendStyles(`modules/sectionActions/sectionActions.css`);
+appendStyles(`src/modules/sectionActions/sectionActions.css`);
 const stage = document.querySelector("#stage");
 
 export const sectionActions = (state, setState) => {

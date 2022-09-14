@@ -1,5 +1,5 @@
 import { appendStyles } from "../../styles/EditorStyles.js";
-appendStyles(`modules/Gridlines/Gridlines.css`);
+appendStyles(`src/modules/Gridlines/Gridlines.css`);
 
 /**
  * Create Gridlines and append to every section

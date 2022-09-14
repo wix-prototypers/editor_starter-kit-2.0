@@ -1,6 +1,6 @@
 import { hoverOn, select } from "../SelectionModel/SelectionModel.js";
 import { appendStyles } from "../../styles/EditorStyles.js";
-appendStyles(`modules/AddSection/add-section.css`);
+appendStyles(`src/modules/AddSection/add-section.css`);
 
 export const AddSection = (state, setState) => {
   /**

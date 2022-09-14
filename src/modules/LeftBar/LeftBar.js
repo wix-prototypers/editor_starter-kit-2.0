@@ -1,7 +1,7 @@
 //Append Styles
 import { appendStyles } from "../../styles/EditorStyles.js";
 import { icons } from "./left-bar-icons.js";
-appendStyles(`modules/LeftBar/left-bar.css`);
+appendStyles(`src/modules/LeftBar/left-bar.css`);
 
 const stage = document.querySelector("#stage");
 const body = document.querySelector("body");
