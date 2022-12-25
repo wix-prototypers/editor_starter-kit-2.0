@@ -30,7 +30,7 @@ editor.onmouseover = (e) => {
     !e.target.closest(".sectionActions") &&
     !e.target.closest("#stage")
   ) {
-    console.log(e.target);
+//     console.log(e.target);
     document.querySelectorAll(`#sectionActions`).forEach((action) => {
       action.classList.remove("show");
     });
