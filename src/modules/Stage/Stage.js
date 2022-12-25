@@ -1,6 +1,6 @@
 import { updateSectionActionsTop } from "../../modules/sectionActions/sectionActions.js";
 import { deselect } from "../SelectionModel/SelectionModel.js";
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 
 appendStyles(`src/modules/Stage/stage.css`);
 

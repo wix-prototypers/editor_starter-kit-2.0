@@ -1,4 +1,4 @@
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 appendStyles(`src/modules/Gridlines/Gridlines.css`);
 
 /**

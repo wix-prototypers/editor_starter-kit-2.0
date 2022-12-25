@@ -1,8 +1,8 @@
 var hrefs = [
-  `src/styles/fonts.css`,
-  `src/styles/normalize.css`,
-  `src/styles/ptyp.css`,
-  `src/styles/variables.css`,
+  `src/Styles/fonts.css`,
+  `src/Styles/normalize.css`,
+  `src/Styles/ptyp.css`,
+  `src/Styles/variables.css`,
 ];
 
 export const appendStyles = (href) => {

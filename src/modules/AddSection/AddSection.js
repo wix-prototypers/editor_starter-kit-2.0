@@ -1,5 +1,5 @@
 import { hoverOn, select } from "../SelectionModel/SelectionModel.js";
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 appendStyles(`src/modules/AddSection/add-section.css`);
 
 export const AddSection = (state, setState) => {

@@ -5,7 +5,7 @@ import { hideFloatingPanels } from "../../modules/FloatingPanel/FloatingPanel.js
 import { updateSectionActionsTop } from "../sectionActions/sectionActions.js";
 import { showAddSection } from "../AddSection/AddSection.js";
 
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 appendStyles(`src/modules/SelectionModel/SelectionModel.css`);
 
 export function select(eleme) {
