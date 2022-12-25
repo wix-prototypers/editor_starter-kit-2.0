@@ -1,5 +1,5 @@
 import { sectionActionsBtns } from "./sectionActions_data.js";
-import { getCoords, getSize } from "../../utils/functions.js";
+import { getCoords, getSize } from "../../Utils/functions.js";
 import { select, hoverOn } from "../SelectionModel/SelectionModel.js";
 
 //Append Styles
