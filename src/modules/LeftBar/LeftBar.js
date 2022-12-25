@@ -1,5 +1,5 @@
 //Append Styles
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 import { icons } from "./left-bar-icons.js";
 appendStyles(`src/modules/LeftBar/left-bar.css`);
 

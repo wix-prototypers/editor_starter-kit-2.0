@@ -1,5 +1,5 @@
 import { modules } from "./modules/modules.js";
-import { appendStyles } from "./styles/EditorStyles.js";
+import { appendStyles } from "./Styles/EditorStyles.js";
 import { setState, State } from "./State.js";
 
 (function App() {
