@@ -2,7 +2,7 @@ import { icons } from "./top-bar-icons.js";
 
 //Append Styles
 var href = `${window.originUrl}/src/modules/TopBar/top-bar.css`;
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 
 appendStyles(`src/modules/TopBar/top-bar.css`);
 

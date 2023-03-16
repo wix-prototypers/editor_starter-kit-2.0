@@ -1,6 +1,6 @@
 import { updateSectionActionsTop } from "../../modules/sectionActions/sectionActions.js";
 import { deselect } from "../SelectionModel/SelectionModel.js";
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 
 appendStyles(`src/modules/Stage/stage.css`);
 
@@ -30,7 +30,7 @@ editor.onmouseover = (e) => {
     !e.target.closest(".sectionActions") &&
     !e.target.closest("#stage")
   ) {
-    console.log(e.target);
+//     console.log(e.target);
     document.querySelectorAll(`#sectionActions`).forEach((action) => {
       action.classList.remove("show");
     });

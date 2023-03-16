@@ -1,8 +1,8 @@
 //Append Styles
 /* var href = "../../src/modules/FloatingPanel/floating-panel.css"; */
 
-import { getCoords, getSize } from "../../utils/functions.js";
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { getCoords, getSize } from "../../Utils/functions.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 appendStyles(`src/modules/FloatingPanel/floating-panel.css`);
 
 import * as icons from "./icons.js";

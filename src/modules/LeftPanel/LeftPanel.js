@@ -7,7 +7,7 @@ import {
   appsContent,
 } from "./leftPanelContent.js";
 
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 appendStyles(`src/modules/LeftPanel/left-panel.css`);
 
 const stage = document.querySelector("#stage");

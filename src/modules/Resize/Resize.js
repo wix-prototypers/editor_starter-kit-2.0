@@ -1,6 +1,6 @@
 import * as icons from "./icons.js";
 
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 appendStyles(`src/modules/Resize/Resize.css`);
 
 export const Resizable = () => {

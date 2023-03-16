@@ -1,10 +1,10 @@
 import { sectionActionsBtns } from "./sectionActions_data.js";
-import { getCoords, getSize } from "../../utils/functions.js";
+import { getCoords, getSize } from "../../Utils/functions.js";
 import { select, hoverOn } from "../SelectionModel/SelectionModel.js";
 
 //Append Styles
 
-import { appendStyles } from "../../styles/EditorStyles.js";
+import { appendStyles } from "../../Styles/EditorStyles.js";
 appendStyles(`src/modules/sectionActions/sectionActions.css`);
 const stage = document.querySelector("#stage");
 
