@@ -100,7 +100,6 @@ export const sectionActions = (state, setState) => {
         let sectionId = e.target
           .closest("#sectionActions")
           .getAttribute("section");
-
         let section = document.querySelector(`#stage #${sectionId}`);
         let body = document.querySelector("body");
         if (body.classList.contains("actionsOverlay")) {
