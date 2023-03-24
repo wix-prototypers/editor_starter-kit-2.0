@@ -5,6 +5,7 @@ $(document).ready(function() {
   $('.gfpp-main-action[type="Change-Vector-Art"] > span').text('Change Strip Background');
   $('.gfpp-main-action[type="Change-Design"] > span').text('Manage Columns');
   $('.gfpp-main-action[type="Settings"] > span').text('Change Column Background');
+  $('.gfpp-btn[type="layout"]').addClass('disabled');
   $('.draggable').removeClass('draggable');
 
   elementEvents();
